@@ -4,7 +4,8 @@ Given /^I navigate to the login page$/ do
 end
 
 When /^I login with an invalid credential combination$/ do
-    @loginPage.enterEmail("wrongUser@email.com")
+    @loginPage.enterEmail("wronguser@email.com")
+    @loginPage.enterEmail("wrongpassword123")
     sleep 3
 end
 
