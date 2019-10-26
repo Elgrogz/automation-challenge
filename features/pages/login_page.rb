@@ -17,11 +17,18 @@ class LoginPage
     emailTextbox.send_keys(email)
   end
 
-    def enterEmail(password)   
+  def enterPassword(password)   
     wait = Selenium::WebDriver::Wait.new(timeout: 10)
     wait.until { @browser.find_element(id: "login_password") }
-    emailTextbox = @browser.find_element(id: "login_password")
-    emailTextbox.send_keys(password)
+    passwordTextBox = @browser.find_element(id: "login_password")
+    passwordTextBox.send_keys(password)
+  end
+
+  def clickLogin()   
+    wait = Selenium::WebDriver::Wait.new(timeout: 10)
+    wait.until { @browser.find_element(name: "commit") }
+    loginButton = @browser.find_element(name: "commit")
+    loginButton.click()
   end
 
 end

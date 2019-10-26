@@ -5,7 +5,8 @@ end
 
 When /^I login with an invalid credential combination$/ do
     @loginPage.enterEmail("wronguser@email.com")
-    @loginPage.enterEmail("wrongpassword123")
+    @loginPage.enterPassword("wrongpassword123")
+    @loginPage.clickLogin()
     sleep 3
 end
 
