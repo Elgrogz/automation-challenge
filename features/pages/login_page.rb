@@ -31,4 +31,11 @@ class LoginPage
     loginButton.click()
   end
 
+  def LoginErrorMessageIsShown()   
+    wait = Selenium::WebDriver::Wait.new(timeout: 10)
+    wait.until { @browser.find_element(class: "flash") }
+    errorMessage = @browser.find_element(class: "flash")
+    return errorMessage.displayed?
+  end
+
 end

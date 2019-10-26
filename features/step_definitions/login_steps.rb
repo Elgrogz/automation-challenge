@@ -1,3 +1,4 @@
+
 Given /^I navigate to the login page$/ do
     @loginPage = LoginPage.new(@browser)
     @loginPage.goToLoginPage()
@@ -11,5 +12,5 @@ When /^I login with an invalid credential combination$/ do
 end
 
 Then /^I should see the invalid credentials login error message$/ do
- 
+    puts @loginPage.LoginErrorMessageIsShown()
 end
