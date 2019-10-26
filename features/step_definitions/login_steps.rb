@@ -1,5 +1,6 @@
 Given /^I navigate to the login page$/ do
-
+  browser.navigate.to "https://login.sandbox.freeagent.com"
+  sleep 3
 end
 
 When /^I login with an invalid credential combination$/ do

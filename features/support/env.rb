@@ -10,10 +10,7 @@ browser = Selenium::WebDriver.for :chrome, driver_path: driver_path
 
 Before do |_scenario|
   @browser = browser
-    sleep 3
   browser.manage.timeouts.implicit_wait = 3
-  browser.navigate.to "https://login.sandbox.freeagent.com"
-  sleep 3
 end
 
 at_exit do
