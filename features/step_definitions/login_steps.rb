@@ -1,5 +1,6 @@
 Given /^I navigate to the login page$/ do
-  browser.navigate.to "https://login.sandbox.freeagent.com"
+    loginPage = LoginPage.new(@browser)
+    loginPage.goToLoginPage()
   sleep 3
 end
 
